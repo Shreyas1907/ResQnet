@@ -1,0 +1,46 @@
+{
+  "disaster_type": "fire",
+  "best_model": "catboost_d6",
+  "calibration": "isotonic",
+  "cv": {
+    "catboost_d3": {
+      "roc_auc": 0.8956900468615157,
+      "pr_auc": 0.8804901279945339
+    },
+    "catboost_d4": {
+      "roc_auc": 0.9012446723020722,
+      "pr_auc": 0.8889873239201314
+    },
+    "catboost_d6": {
+      "roc_auc": 0.9080515553827181,
+      "pr_auc": 0.8986120636888362
+    }
+  },
+  "heldout": {
+    "roc_auc": 0.9127690847213543,
+    "pr_auc": 0.9027967077142119,
+    "prevalence": 0.4457741211667913,
+    "n_test": 5348,
+    "n_test_pos": 2384
+  },
+  "spatial_cv": {
+    "roc_auc": 0.8819776308625176,
+    "pr_auc": 0.8611771623244926,
+    "block_deg": 15
+  },
+  "n_rows": 26736,
+  "n_positive": 11920,
+  "features": [
+    "severity",
+    "latitude",
+    "longitude"
+  ],
+  "severity_edges": [
+    6.99,
+    22.1,
+    69.2,
+    297.29
+  ],
+  "label": "NASA FIRMS (MODIS+VIIRS, 2024-11-01..2025-01-13): 0.5deg cell with fire on >=10 distinct days; severity from peak daily FRP quantiles",
+  "seconds": 30
+}

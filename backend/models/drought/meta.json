@@ -1,0 +1,46 @@
+{
+  "disaster_type": "drought",
+  "best_model": "catboost_d3",
+  "calibration": "sigmoid",
+  "cv": {
+    "catboost_d3": {
+      "roc_auc": 0.626605814739689,
+      "pr_auc": 0.213061889077567
+    },
+    "catboost_d4": {
+      "roc_auc": 0.5968559837728196,
+      "pr_auc": 0.2081635344628829
+    },
+    "catboost_d6": {
+      "roc_auc": 0.5936443542934415,
+      "pr_auc": 0.22205283303308138
+    }
+  },
+  "heldout": {
+    "roc_auc": 0.7462121212121212,
+    "pr_auc": 0.42064858446453846,
+    "prevalence": 0.16981132075471697,
+    "n_test": 53,
+    "n_test_pos": 9
+  },
+  "spatial_cv": {
+    "roc_auc": 0.719596756987412,
+    "pr_auc": 0.32534853906303934,
+    "block_deg": 15
+  },
+  "n_rows": 261,
+  "n_positive": 43,
+  "features": [
+    "severity",
+    "latitude",
+    "longitude"
+  ],
+  "severity_edges": [
+    27140.0,
+    51513.0,
+    91151.0,
+    146335.0
+  ],
+  "label": "GDACS Orange/Red alert",
+  "seconds": 3
+}

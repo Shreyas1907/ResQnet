@@ -1,0 +1,46 @@
+{
+  "disaster_type": "flood",
+  "best_model": "catboost_d3",
+  "calibration": "isotonic",
+  "cv": {
+    "catboost_d3": {
+      "roc_auc": 0.8392964352720449,
+      "pr_auc": 0.47237011338304535
+    },
+    "catboost_d4": {
+      "roc_auc": 0.8379823327079424,
+      "pr_auc": 0.4774500105970727
+    },
+    "catboost_d6": {
+      "roc_auc": 0.8386421200750469,
+      "pr_auc": 0.47448272690950066
+    }
+  },
+  "heldout": {
+    "roc_auc": 0.8256197520991604,
+    "pr_auc": 0.49715964624457615,
+    "prevalence": 0.14385964912280702,
+    "n_test": 570,
+    "n_test_pos": 82
+  },
+  "spatial_cv": {
+    "roc_auc": 0.8270588647231837,
+    "pr_auc": 0.43695225436734025,
+    "block_deg": 15
+  },
+  "n_rows": 2848,
+  "n_positive": 410,
+  "features": [
+    "severity",
+    "latitude",
+    "longitude"
+  ],
+  "severity_edges": [
+    4.36,
+    5.06,
+    5.642,
+    6.32
+  ],
+  "label": "GDACS Orange/Red alert; rows with severity>0",
+  "seconds": 5
+}

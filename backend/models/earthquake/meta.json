@@ -1,0 +1,47 @@
+{
+  "disaster_type": "earthquake",
+  "best_model": "catboost_d3",
+  "calibration": "isotonic",
+  "cv": {
+    "catboost_d3": {
+      "roc_auc": 0.8076466065562312,
+      "pr_auc": 0.7212342549365488
+    },
+    "catboost_d4": {
+      "roc_auc": 0.8045012930733207,
+      "pr_auc": 0.7239699785399714
+    },
+    "catboost_d6": {
+      "roc_auc": 0.8028936884042777,
+      "pr_auc": 0.7048729927361653
+    }
+  },
+  "heldout": {
+    "roc_auc": 0.8929939792008759,
+    "pr_auc": 0.871941759628661,
+    "prevalence": 0.31521739130434784,
+    "n_test": 92,
+    "n_test_pos": 29
+  },
+  "spatial_cv": {
+    "roc_auc": 0.7845641619526971,
+    "pr_auc": 0.6934866735943688,
+    "block_deg": 15
+  },
+  "n_rows": 457,
+  "n_positive": 143,
+  "features": [
+    "severity",
+    "people_affected",
+    "latitude",
+    "longitude"
+  ],
+  "severity_edges": [
+    5.4,
+    5.8,
+    6.3,
+    6.9
+  ],
+  "label": "EM-DAT total deaths >= 10; severity from magnitude quantiles",
+  "seconds": 10
+}

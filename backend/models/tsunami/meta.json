@@ -1,0 +1,40 @@
+{
+  "disaster_type": "tsunami",
+  "best_model": "catboost_d3",
+  "calibration": "isotonic",
+  "cv": {
+    "catboost_d3": {
+      "roc_auc": 0.7680690399137002,
+      "pr_auc": 0.5494850598809154
+    },
+    "catboost_d4": {
+      "roc_auc": 0.76764407832369,
+      "pr_auc": 0.5416773607974874
+    },
+    "catboost_d6": {
+      "roc_auc": 0.7619561308881697,
+      "pr_auc": 0.5347894672503275
+    }
+  },
+  "heldout": {
+    "roc_auc": 0.7523388773388774,
+    "pr_auc": 0.592119491196735,
+    "prevalence": 0.26,
+    "n_test": 100,
+    "n_test_pos": 26
+  },
+  "spatial_cv": {
+    "roc_auc": 0.6977266553835224,
+    "pr_auc": 0.4400245040634419,
+    "block_deg": 15
+  },
+  "n_rows": 500,
+  "n_positive": 129,
+  "features": [
+    "severity",
+    "latitude",
+    "longitude"
+  ],
+  "label": "NOAA deaths order>=2 or damage order>=3 (missing treated as none); year>=1900; severity from tsIntensity",
+  "seconds": 4
+}
